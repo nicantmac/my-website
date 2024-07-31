@@ -1,0 +1,751 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #e8fdfd; /* Background color */
+}
+
+.sidebar {
+    position: fixed;
+    right: -2px;
+    top: 0;
+    width: 130px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 70px;
+    z-index: 10;
+}
+
+.icon-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    cursor: pointer;
+    z-index: 10;
+
+}
+
+.icon {
+    width: 1.35em; /* Increased size of the icons */
+    font-size: 24px;
+    transition: transform 0.3s;
+    z-index: 10;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(70%) contrast(102%);
+}
+
+.icon-text {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9em;
+    color: #c9bebe;
+    font-family: "Avenir Next", sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    z-index: 10;
+
+}
+
+.icon-container:hover .icon {
+    transform: translateY(-10px);
+    z-index: 10;
+}
+
+.icon-container:hover .icon-text {
+    opacity: 1;
+    z-index: 10;
+    visibility: visible;
+    transform: translateX(-50%) translateY(10px);
+    text-shadow: 0 0 10px white;
+}
+
+#Sector-1 {
+    background: url('ImportIMGS/valdemaras-d-khbjgGAerPU-unsplash.jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+    z-index: -2;
+}
+
+#main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    position: absolute;
+    top: 70%; /* Position to the middle of the screen vertically */
+    left: 5%; /* Position near the left side of the screen */
+    transform: translateY(-50%); /* Adjust to center vertically */
+}
+
+#main-title-1 {
+    font-size: calc(7vw + 2em); /* Adjust font size for responsiveness */
+    position: absolute;
+    left: 5.5%;
+    top: 35%;
+}
+
+#main-title-2 {
+    font-size: calc(5.5vw + 1em); /* Adjust font size for responsiveness */
+}
+
+#main-title-1, #main-title-2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: bolder;
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.2), 0 0 4px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(45deg, #e7d8d8, #d5f8f8);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@media (max-width: 768px) {
+    #main-title-1 {
+        font-size: calc(3.5vw + 1.5em); /* Adjust font size for responsiveness */
+    }
+
+    #main-title-2 {
+        font-size: calc(2vw + 0.8em); /* Adjust font size for responsiveness */
+    }
+}
+
+@media (max-width: 480px) {
+    #main-title-1 {
+        font-size: calc(3vw + 1em); /* Adjust font size for responsiveness */
+    }
+
+    #main-title-2 {
+        font-size: calc(1.5vw + 0.6em); /* Adjust font size for responsiveness */
+    }
+}
+
+
+
+
+
+#Sector-2 {
+    position: relative;
+    height: 100vh;
+    margin-bottom: 80px;
+}
+
+#intro-content {
+    position: absolute;
+    width: 600px;
+    height: 675px;
+    top: 100px;
+    left: 5%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 35px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #333;
+    z-index: 4;
+}
+
+.content-part {
+    position: relative;
+}
+
+.section-text {
+    font-family: 'Avenir Next', sans-serif;
+}
+
+#intro-title, #sub-title, #intro-description, #personal-intro {
+    background: linear-gradient(75deg, #436ab7, #0e0657);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 600% 600%;
+    animation: gradientAnimation 2s infinite alternate-reverse;
+}
+
+#intro-title {
+    position: absolute;
+    left: 3.5em;
+    top: 40px;
+    font-size: 2.95em;
+    font-weight: bold;
+    z-index: 7;
+}
+
+.separating {
+    position: absolute;
+    height: 1px;
+    background-color: #12108c;
+    border: none;
+    margin: 20px 0;
+    top: 160px;
+    left: 55px;
+    width: 480px;
+}
+
+#sub-title {
+    position: absolute;
+    left: 1.7em;
+    top: 100px;
+    font-size: 2.95em;
+    font-weight: bold;
+    z-index: 7;
+}
+
+#intro-description {
+    position: absolute;
+    left: 3.5em;
+    top: 200px;
+    width: 500px;
+    font-size: 1em;
+    font-weight: normal;
+    z-index: 7;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#profile-container {
+    position: absolute;
+    top: 280px;
+    left: 100px;
+    width: 380px;
+    height: 380px;
+    z-index: 7;
+    border-radius: 20px;
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 35px rgb(40, 40, 61);
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+#profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+#profile-note {
+    position: absolute;
+    bottom: -60px;
+    left: 50px;
+    width: 90px;
+    z-index: 8;
+    font-size: .50em;
+    font-family: "Avenir Next", sans-serif;
+    transition: bottom 0.3s ease;
+    border-radius: 30px;
+    color: black;
+    text-shadow: 0 0 10px ghostwhite;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+}
+
+#profile-container:hover #profile-note {
+    bottom: 50px;
+}
+
+.typing-text {
+    font-size: 2em;
+    color: #333;
+}
+
+#personal-info {
+    position: relative;
+    top: 90px;
+    right: 13%;
+}
+
+#personal-intro {
+    position: absolute;
+    top: 0px;
+    right: 65px;
+    font-weight: bolder;
+    font-family: "Avenir Next", sans-serif;
+    font-size: 12.5vw;
+    color: #29295e;
+}
+
+#detailedinfo {
+    position: absolute;
+    width: 30%;
+    height: 28vw;
+    justify-content: center;
+    right: 25px;
+    top: 220px;
+    color: #29295e;
+    line-height: 35px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+.scroll-control {
+    position: absolute;
+    display: none; /* Initially hidden */
+    padding: 10px;
+    background-color: #29295e;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.scroll-controls {
+    position: absolute;
+    bottom: -670px;
+    right: 120px;
+    display: flex;
+    gap: 40px;
+}
+
+.scroll-indicator {
+    padding: 10px;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: bolder;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 35px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color: #333;
+    opacity: 0.5; /* Default faded state */
+    transition: opacity 0.3s ease; /* Smooth transition for fading */
+    cursor: pointer;
+}
+
+.scroll-indicator.active {
+    opacity: 1; /* Fully visible when active */
+}
+
+.scroll-separator {
+    width: 2px; /* Line thickness */
+    height: 40px; /* Adjust based on your design */
+    background-color: #696868; /* Line color */
+}
+
+
+
+
+
+
+/* Big Subtitle */
+.work-subtitle {
+    text-align: center; /* Center align the subtitle */
+    margin-bottom: 40px; /* Space below the subtitle */
+}
+
+.work-subtitle h2 {
+    font-size: 10vw; /* Adjust font size */
+    letter-spacing: 4px;
+    margin-right: 100px;
+    color: #29295e; /* Subtitle color */
+    font-weight: bolder; /* Make the subtitle bold */
+    font-family: "Avenir Next", sans-serif; /* Font family */
+    /* Remove default margin */
+}
+
+#Sector-3 {
+    position: relative; /* Make sure it's relative to its normal position */
+    margin-top: 200px; /* Add space from previous section, adjust as needed */
+}
+
+.experience-container {
+    position: relative; /* Adjust positioning based on container needs */
+    width: 80vw;
+    right: 5vw;
+    max-width: 1200px;
+    margin: 0 auto; /* Center container */
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    width: 70vw;
+    margin: 20px auto; /* Center items and add spacing */
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Frosted glass effect */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.experience-image {
+    height: auto;
+    border-radius: 25px;
+    margin-right: 20px; /* Space between image and separator line */
+}
+
+.separator-line {
+    width: 1px;
+    height: 250px;
+    background-color: #ccc;
+    margin-right: 20px; /* Space between separator line and text */
+}
+
+.experience-details {
+    flex: 1;
+    padding: 10px;
+    color: #29295e;
+}
+
+.experience-details h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #29295e;
+    font-weight: bolder;
+    font-family: "Avenir Next", sans-serif;
+}
+
+.experience-details p {
+    margin: 10px 0;
+    line-height: 1.6;
+    font-weight: normal;
+    font-family: "Avenir Next", sans-serif;
+}
+
+.experience-details p strong {
+    color: #29295e;
+    font-weight: normal;
+    font-family: "Avenir Next", sans-serif;
+}
+
+.experience-item a{
+    transform: scale(.85)
+}
+
+
+
+
+
+
+
+/* General section styling */
+#Sector-4 {
+    margin-top: 9em;
+    display: flex; /* Use flexbox to align child elements side by side */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between the sections */
+    padding: 20px; /* Add padding around the section */
+    background: #e8fdfd; /* Background color for the section */
+}
+
+
+.card-wrapper {
+    position: absolute;
+    left: 15px;
+    max-width: 900px;
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Positioning for card-wrapper heading */
+.card-wrapper h1 {
+    font-size: 3em;
+    font-family: "Avenir Next", sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    top: -25px; /* Adjust to move header up or down */
+    margin: 0;
+    color: #29295e;
+}
+
+/* Positioning for Xpire-container heading */
+.Xpire-container > h1 {
+    font-size: 3em;
+    letter-spacing: 2px;
+    font-family: "Avenir Next", sans-serif;
+    position: relative;
+    top: -5px; /* Adjust to move header up or down */
+    margin: 0;
+    color: #29295e;
+}
+
+.Xpire-section > h2 {
+    font-size: 2.5em;
+    font-weight: normal;
+    font-family: "Avenir Next", sans-serif;
+    color: #29295e;
+}
+
+h1 {
+    font-weight: bold;
+    font-family: "Avenir Next", sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates a 2x2 grid */
+    gap: 40px; /* Adjust gap between cards */
+    justify-content: center;
+    align-items: center;
+}
+
+.click-me {
+    margin-left: 40px;
+    margin-top: 60px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    font-family: "Avenir Next", sans-serif;
+    font-size: 18px;
+    color: #29295e;
+}
+
+.arrow {
+    margin-left: 5px;
+    animation: upDown 5.5ms ease-in-out infinite;
+}
+
+@keyframes upDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.card-container {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    perspective: 130px;
+}
+
+
+.card-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card-flipped .card-content {
+    transform: translateX(10px) translateY(-4.7px) scale(1) rotateY(180deg); /* Flips the card */
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    cursor: grab;
+}
+
+
+.card-front, .card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: "Avenir Next", sans-serif;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.card-front {
+    background: #e2f3f3;
+}
+
+.card-back {
+    background: #29295e;
+    color: #fff;
+    transform: rotateY(180deg); /* Ensures the back is hidden initially */
+    padding: 20px;
+}
+
+
+.Xpire-container {
+    display: flex;
+    position: relative;
+    right: -150px;
+    flex-direction: column; /* Ensures sections stack vertically */
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    width: 550px; /* Adjusted width to fit more content */
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4); /* Shadow for 3D effect */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    gap: 20px; /* Space between sections */
+}
+
+.Xpire-section {
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent background for each section */
+    backdrop-filter: blur(5px); /* Frosted glass effect for sections */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    width: 500px;
+
+}
+
+.Xpire-tags {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Allow tags to wrap to the next line */
+    gap: 10px; /* Space between tags */
+    justify-content: center; /* Center tags horizontally */
+}
+
+.tag {
+    display: inline-block;
+    background: rgb(245, 245, 253); /* Semi-transparent background for tags */
+    border-radius: 50px;
+    padding: 8px 9px;
+    border: 1px solid #29295e;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+    color: #29295e;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Avenir Next", sans-serif;
+    backdrop-filter: blur(50px); /* Frosted glass effect for tags */
+}
+
+
+
+
+
+
+/* General footer styling */
+.footer {
+    border-top: 8px solid black;
+    background-color: #29295e; /* Adjust color as needed */
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    bottom: -7vw;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    width: 85%;
+}
+
+.footer-section {
+    flex: 1 1 200px; /* Grow and shrink, with a base width of 200px */
+    margin: 10px;
+}
+
+.footer-section h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 5px;
+    width: 90%;
+    color: #fff;
+    font-weight: normal;
+    font-family: "Avenir Next", sans-serif;
+}
+
+#about-section {
+    font-weight: lighter;
+    font-family: "Avenir Next", sans-serif;
+    padding-top: 20px;
+    font-size: 1vw;
+}
+
+.footer-section p, .footer-section ul {
+    width: 90%;
+    margin: 10px;
+    padding: 30px;
+    list-style: none;
+    font-family: "Avenir Next", sans-serif;
+}
+
+.footer-section a {
+    margin-right: 50px;
+    transform: scale(2);
+    color: #fff;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 50px; /* Space between items */
+    justify-content: center; /* Center the grid within the container */
+    padding: 50px;
+    width: 90%;
+}
+
+.social-links li {
+    margin: 0; /* Remove margin to keep the layout tight */
+}
+
+.social-links a {
+    display: inline-block; /* Ensure links are block-level for styling */
+    transform: scale(2);
+    text-decoration: none;
+    color: #fff; /* Ensure text color is consistent */
+    transition: all ease 0.3s;
+}
+
+/* Optional: Add hover effect for links */
+.social-links a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 15px white;
+    transform: scale(2.45);
+}
+
+#mailer {
+    transform: scale(1.5) translateY(-3px);
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(105%) contrast(102%);
+}
+
+#mailer a:hover {
+    text-shadow: 0 0 55px white;
+}
+
+.footer-bottom {
+    border-top: 1.5px solid white;
+    padding: 10px;
+    width: 90%;
+    margin-top: -10px;
+    font-family: "Avenir Next", sans-serif;
+}
