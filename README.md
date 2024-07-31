@@ -11,7 +11,7 @@
 <section class="sidebar">
     <div class="icon-container">
         <a href="#Sector-1">
-            <img class="icon icon1" src="ImportIMGS/icons/Streamline-House.svg" alt="Home">
+            <img class="icon icon1" src="Streamline-House.svg" alt="Home">
             <span class="icon-text">Home</span>
         </a>
     </div>
