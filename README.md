@@ -57,7 +57,7 @@
             Constantly becoming acclimated with the latest technologies and methodologies to innovate tech-world solutions.
         </p>
         <div id="profile-container" class="profile">
-            <img id="profile-pic" src="ImportIMGS/nickmack.jpeg" alt="Nick Mack">
+            <!--<img id="profile-pic" src="ImportIMGS/nickmack.jpeg" alt="Nick Mack">-->
             <!--<p id="profile-note" class="profile-note">A sweetheart ☺️</p>-->
         </div>
     </div>
