@@ -58,7 +58,7 @@
         </p>
         <div id="profile-container" class="profile">
             <img id="profile-pic" src="ImportIMGS/nickmack.jpeg" alt="Nick Mack">
-            <p id="profile-note" class="profile-note">A sweetheart ☺️</p>
+            <!--<p id="profile-note" class="profile-note">A sweetheart ☺️</p>-->
         </div>
     </div>
 
