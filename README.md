@@ -6,7 +6,7 @@ This is the start of my technical journey to become an innovative Software Engin
 
 <div>
     <a href="https://nickjustcode.com">
-        <img src="ImportIMGS/valdemaras-d-khbjgGAerPU-unsplash.jpg" width="2000px" height="800px" alt="Nick's Portfolio Website"></a>
+        <img src="ImportIMGS/valdemaras-d-khbjgGAerPU-unsplash.jpg" alt="Nick's Portfolio Website"></a>
 </div>
 
 ## Features from Start to Finish
