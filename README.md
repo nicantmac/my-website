@@ -5,7 +5,7 @@ This is the start of my technical journey to become an innovative Software Engin
 # Peaceful Programmer
 
 <div>
-    <a href="http://nickjustcode.com">
+    <a href="http://nickjustcode.com" target="_blank">
         <img src="ImportIMGS/valdemaras-d-khbjgGAerPU-unsplash.jpg" alt="Nick's Portfolio Website"></a>
 </div>
 
