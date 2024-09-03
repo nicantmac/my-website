@@ -1,8 +1,8 @@
-# My Portfolio Website - <a href="https://nickjustcode.com" target="blank">Visit Me!</a>
+# 💻 My Portfolio Website - <a href="https://nickjustcode.com" target="blank">Visit Me!</a>
 Welcome to my personal website which presents my beginner-level Web Development skills. 
 This is the start of my technical journey to become an innovative Software Engineer.
 
-# Peaceful Programmer
+# 🎐 Peaceful Programmer
 
 <div>
     <a href="http://nickjustcode.com" target="_blank">
